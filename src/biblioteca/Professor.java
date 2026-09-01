@@ -9,11 +9,13 @@ public class Professor extends Usuario {
     }
 
     // Sobrescrita do método abstrato
+    @Override
     public int obterDiasDevolucao() {
         return 15;
     }
 
     // Sobrescrita do método da interface
+    @Override
     public void imprimirDados() {
         System.out.println("PROFESSOR | Nome: " + super.nome + " | Departamento: " + this.departamento);
         if (this.getLivroAlugado() != null) {

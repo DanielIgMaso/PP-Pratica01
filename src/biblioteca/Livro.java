@@ -4,6 +4,7 @@ public class Livro implements Imprimivel {
     // Atributos privados (Encapsulamento)
     private String titulo;
     private String autor;
+    private boolean disponivel = true; // Disponibilidade do livro
 
     // Atributo Estático
     private static int totalLivros = 0;
@@ -22,6 +23,9 @@ public class Livro implements Imprimivel {
 
     public String getAutor() { return autor; }
     public void setAutor(String autor) { this.autor = autor; }
+
+    public boolean getDisponivel() { return disponivel; }
+    public void setDisponivel(boolean disponivel) { this.disponivel = disponivel;}
 
     public static int getTotalLivros() { return totalLivros; }
 
