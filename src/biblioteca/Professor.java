@@ -1,0 +1,28 @@
+package biblioteca;
+
+public class Professor extends Usuario {
+    private String departamento;
+
+    public Professor(String nome, String departamento) {
+        super(nome);
+        this.departamento = departamento;
+    }
+
+    // Sobrescrita do método abstrato
+    public int obterDiasDevolucao() {
+        return 15;
+    }
+
+    // Sobrescrita do método da interface
+    public void imprimirDados() {
+        System.out.println("PROFESSOR | Nome: " + super.nome + " | Departamento: " + this.departamento);
+        if (this.getLivroAlugado() != null) {
+            System.out.println("  -> Possui livro alugado: " + this.getLivroAlugado().getTitulo());
+        } else {
+            System.out.println("  -> Nenhum livro alugado no momento.");
+        }
+    }
+
+    public String getDepartamento() { return departamento; }
+    public void setDepartamento(String departamento) { this.departamento = departamento; }
+}
